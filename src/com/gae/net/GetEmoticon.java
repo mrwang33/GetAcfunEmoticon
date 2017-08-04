@@ -24,6 +24,11 @@ public class GetEmoticon {
             //得到图片的二进制数据，以二进制封装得到数据，具有通用性
             byte[] data = readInputStream(inStream);
             //new一个文件对象用来保存图片，默认保存当前工程根目录
+            File directory = new File("E:\\photo");
+            //如果文件夹不存在则创建
+            if (!directory.exists()) {
+                directory.mkdir();
+            }
             File imageFile = new File("E:\\photo\\"+filename+".gif");
             //创建输出流
             FileOutputStream outStream = new FileOutputStream(imageFile);
