@@ -98,5 +98,28 @@ public class GetEmoticon {
             }
             getPicFromURL(prefixURL+version+"/"+emoticonSerialNumber+suffixURL,"ac3-"+i);
         }
+        
+                //获取所有ac先锋表情
+        version = "blizzard";
+        for (int i=1;i<22;i++) {
+            if (i<10) {
+                emoticonSerialNumber = "0"+i;
+            } else {
+                emoticonSerialNumber = i+"";
+            }
+            getPicFromURL(prefixURL+version+"/"+emoticonSerialNumber+suffixURL,"ac-blizzard-"+i);
+        }
+
+        //获取所有ac匿名版表情
+        version = "ais";
+        for (int i=1;i<41;i++) {
+            if (i<10) {
+                emoticonSerialNumber = "0"+i;
+            } else {
+                emoticonSerialNumber = i+"";
+            }
+            getPicFromURL(prefixURL+version+"/"+emoticonSerialNumber+suffixURL,"ac-ais-"+i);
+        }
+
     }
 }
